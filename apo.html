@@ -1,0 +1,113 @@
+<html>
+<head>
+<style>
+
+
+
+
+p {
+  display: inline;
+  font-family: chalkboard;
+  line-height: 2em;
+  color: black;
+  letter-spacing: 2.5px;
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+
+#repeat {
+  	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 5s;
+}
+
+#container {
+  width: 65%;
+  position: relative;
+  margin: 10em auto;
+}
+
+iframe {
+visibility: hidden;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+</style>
+<script>
+var counter = 0;
+setInterval( function(){
+  counter++; 
+  if(counter <= 5){
+    id = document.getElementById("repeat");
+    var i = 0;
+    
+    var firstTxt = "I'm sorry, Awantika . I am for real. Never meant to  make you sad , I want you to be happy , you know i am coocker so please . I apologize. ";
+    
+       var speed = 45;
+
+    
+function typeWriter() {
+  if (counter == 1) {
+    document.getElementById("repeat").innerHTML += firstTxt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed); 
+  } else if(counter == 5) {
+    document.getElementById("repeat").innerHTML += lastTxt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed); 
+  } else {
+     document.getElementById("repeat").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed); 
+  }
+} 
+    id = typeWriter();
+  }
+   
+}, 7000);
+
+
+//autoscroll
+
+function pageScroll() {
+    window.scrollBy(0,1);
+    scrolldelay = setTimeout(pageScroll,0);
+}
+
+setTimeout(function(){ pageScroll(); }, 3000);
+
+
+
+
+</script>
+</head>
+
+<body>
+<div id="container"> 
+  
+<iframe width="0" height="0" src="https://www.youtube.com/embed/2Efr1E19phU?autoplay=1&showinfo=0&loop=1&list=PLvNxGp1V1dOwpDBl7L3AJIlkKYdNDKUEs&rel=0" 
+frameborder="0"></iframe>
+
+<p id="repeat"><b>@Miss Awantika Shukla </b></p>
+<div>
+</div>
+<div >
+<span style='font-size:100px;'>&#128591;</span>
+
+</div>
+
+
+
+</body>
+
+</html>
